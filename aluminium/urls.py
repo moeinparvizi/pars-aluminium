@@ -24,4 +24,4 @@ urlpatterns = [
     path('projects/',include("project.urls"),name='projects'),
     path('about/',include("about.urls"),name='about'),
 ]
-
+handler404 = 'aluminium.views.handler404'
