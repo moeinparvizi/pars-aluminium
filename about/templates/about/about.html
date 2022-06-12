@@ -1,0 +1,328 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    شرکت آلمینیوم | درباره ما
+{% endblock %}
+
+{% block header_refrences %}
+    <!-- Favicons -->
+  <link href="{% static '/images/favicon.png' %}" rel="icon">
+  <link href="{% static '/images/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+
+  <link href="{% static  'vendor/aos/aos.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'style.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block header_nav_bar %}
+    <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <a href="{% url 'home' %}" class="logo"><img src="{% static 'images/logo-removebg-preview (1).png' %}" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="{% url 'home' %}">خانه</a></li>
+          <li><a href="{% url 'projects' %}">محصولات</a></li>
+          <li><a href="{% url 'contact' %}">ارتباط با ما</a></li>
+          <li><a class="active" href="{% url 'about' %}">درباره ما</a></li>
+          <!-- <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-telegram"></i></i></a>
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+{% endblock %}
+    {% block content %}
+        <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title" style="font-size: 20px">
+          <h2>پنجره آلومینیومی نرمال</h2>
+          <p>پنجره آلومینیومی نرمال
+ پنجره یکی از مهم ترین جنبه های ساختمان ها است. از این پنجره ها استفاده می شود که نور طبیعی را برای خانه فراهم کنید و سبک خاص و منحصر به فرد را در نمای ساختمانی خود به وجود آورید. با درب و پنجره ها فضایی برای اتصال خانه به فضای بیرونی فراهم می شود. توجه داشته باشید که انتخاب قاب مناسب برای درب و پنجره های ساختمانتان بسیار ارزشمند است.
+
+پنجره نرمال به پنجره آلومینیومی گفته می شود که در پروفیل اولیه آن از هیچگونه لایه و اتصالاتی جهت عایق کردن پروفیل های فریم و چهارچوب و میانی استفاده نشده است و کلیت پروفیل اصلی از آلومینیوم تشکیل شده است.
+
+اگر اطلاعات کافی در زمینه پنجره آلومینیومی نرمال ندارید می توانید با مطالعه این مقاله به اطلاعات جامع و کافی در این زمینه برسید. همچنین می توانید با گروه صنعتی درساوین در ارتباط باشید و از مشاوره مشاورین آموزش دیده ما بهره مند شوید.
+
+نوع قاب برای پنجره هایی که برای نصب در خانه یا محل کار انتخاب می شود، تا حد زیادی در زیبایی نمای ساختمان شما موثر می باشد. درب و پنجره های دوجداره آلومینیومی نرمال بسیار ظریف و باریک بوده و از زیبایی فراوانی برخوردار می باشد. پنجره های آلومینیومی نسبت به ظرافت و باریکی که دارند از استحکام بسیار بالایی برخوردار هستند.</p>
+        </div>
+
+{#        <div class="row">#}
+{#          <div class="col-lg-4">#}
+{#            <img src="{% static 'images/about.jpg' %}" class="img-fluid" alt="">#}
+{#          </div>#}
+{#          <div class="col-lg-8 pt-4 pt-lg-0 content">#}
+{#            <h3>Illustrator &amp; UI/UX Designer</h3>#}
+{#            <p class="fst-italic">#}
+{#              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore#}
+{#              magna aliqua.#}
+{#            </p>#}
+{#            <div class="row">#}
+{#              <div class="col-lg-6">#}
+{#                <ul>#}
+{#                  <li><i class="bi bi-rounded-right"></i> <strong>Birthday:</strong> 1 May 1995</li>#}
+{#                  <li><i class="bi bi-rounded-right"></i> <strong>Website:</strong> www.example.com</li>#}
+{#                  <li><i class="bi bi-rounded-right"></i> <strong>Phone:</strong> +123 456 7890</li>#}
+{#                  <li><i class="bi bi-rounded-right"></i> <strong>City:</strong> City : New York, USA</li>#}
+{#                </ul>#}
+{#              </div>#}
+{#              <div class="col-lg-6">#}
+{#                <ul>#}
+{#                  <li><i class="bi bi-rounded-right"></i> <strong>Age:</strong> 30</li>#}
+{#                  <li><i class="bi bi-rounded-right"></i> <strong>Degree:</strong> Master</li>#}
+{#                  <li><i class="bi bi-rounded-right"></i> <strong>PhEmailone:</strong> email@example.com</li>#}
+{#                  <li><i class="bi bi-rounded-right"></i> <strong>Freelance:</strong> Available</li>#}
+{#                </ul>#}
+{#              </div>#}
+{#            </div>#}
+{#            <p>#}
+{#              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.#}
+{#              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.#}
+{#            </p>#}
+{#          </div>#}
+{#        </div>#}
+
+      </div>
+    </section><!-- End About Section -->
+
+{#    <!-- ======= Facts Section ======= -->#}
+{#    <section id="facts" class="facts">#}
+{#      <div class="container" data-aos="fade-up">#}
+{##}
+{#        <div class="section-title">#}
+{#          <h2>Facts</h2>#}
+{#          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>#}
+{#        </div>#}
+{##}
+{#        <div class="row counters">#}
+{##}
+{#          <div class="col-lg-3 col-6 text-center">#}
+{#            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>#}
+{#            <p>Clients</p>#}
+{#          </div>#}
+{##}
+{#          <div class="col-lg-3 col-6 text-center">#}
+{#            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>#}
+{#            <p>Projects</p>#}
+{#          </div>#}
+{##}
+{#          <div class="col-lg-3 col-6 text-center">#}
+{#            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>#}
+{#            <p>Hours Of Support</p>#}
+{#          </div>#}
+{##}
+{#          <div class="col-lg-3 col-6 text-center">#}
+{#            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>#}
+{#            <p>Hard Workers</p>#}
+{#          </div>#}
+{##}
+{#        </div>#}
+{##}
+{#      </div>#}
+{#    </section><!-- End Facts Section -->#}
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" style="width: 30%" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>ویژگی های پنجره آلومینیومی نرمال</h2>
+          <p style="font-size: 20px;font-weight: bold;text-align: right">ویژگی های در و پنجره آلومینیومی نرمال عبارتند از:</p>
+<br>
+            <p style="font-size: 20px;">
+
+            <ul style="user-select: auto;text-align: right">
+            <li style="user-select: auto;">ظرافت و زیبایی و استحکام</li>
+            <li style="user-select: auto;">پودری الکترواستاتیک و طرح چوب، رنگ پذیری با طول عمر و تنوع زیاد شامل رنگ های آنادایز</li>
+            <li style="user-select: auto;">استفاده کردن از واشرهای epdm که دارای عمر بالایی می باشند جهت جلوگیری از عبور گرد و غبار و آب</li>
+            <li style="user-select: auto;">استفاده کردن از انواع یراق آلات که شامل: فولکس واگنی، لیفت اند اسلاید، کنگی، حالتی و لولایی</li>
+            <li style="user-select: auto;">عدم رنگ پریدگی و ثبات رنگ و قابلیت نظافت مناسب</li>
+            <li style="user-select: auto;">جهت جلوگیری از اتلاف انرژی لاستیک پلی آمید هستند.</li>
+            <li style="user-select: auto;">عدم محدودیت داشتن در طرح ابعاد و اشکال نامنظم و منحنی</li>
+            <li style="user-select: auto;">دارای ثبات رنگ و قابلیت نظافت مناسب و عدم رنگ پریدگی</li>
+            <li style="user-select: auto;">دارای لاستیک پلی آمید جهت جلوگیری از اتلاف انرژی</li>
+            <li style="user-select: auto;">عدم محدودیت در طرح ابعاد و اشکال نامنظم و منحنی</li>
+            <li style="user-select: auto;">دارا بودن قابلیت نصب شیشه های تک جداره، دو و سه جداره</li>
+            <li style="user-select: auto;">مورد تولید قرار گرفتن توسط گوشهای دایکاستی و پانچی</li>
+            <li style="user-select: auto;">غیر اشتعال بودن</li>
+        </ul>
+            </p>
+        </div>
+
+          <div class="section-title" style="margin-top: 30px">
+          <h2>بروزترین دستگاه های ما</h2>
+          <p style="font-size: 30px">درحال بروز رسانی</p>
+        </div>
+          <div class="section-title" style="margin-top: 30px">
+          <h2>ترمال بریک چیست؟</h2>
+          <p id="tw-target-text" style="user-select: auto;">ترمال بریک یا همان شکست حرارتی قطعه ای از مواد نارسانا با <strong style="user-select: auto;">انتقال حرارتی کم</strong> است که بین دو قسمت داخلی و خارجی <strong style="user-select: auto;">فریم آلومینیومی</strong> قرار می گیرد . این قطعه جریان انتقال انرژی حرارتی بین مواد رسانا را کاهش داده یا از آن جلوگیری می کند . <strong style="user-select: auto;">پنجره های ترمال بریک</strong> اغلب در مقایسه با پنجره های بدون ترمال بریک دارای عملکرد بالاتری از لحاظ حرارتی و همچنین با فریم های باریک تر هستند.</p>
+              <br>
+              <p id="tw-target-text" style="user-select: auto;">معمولا یک ماده با قابلیت رسانایی حرارتی کم ، مانند پلیمر به عنوان مانع بین دو ماده رسانا استفاده می شود. مواد پلیمری مقاومت بالایی در برابر انتقال حرارت دارند و می توانند تا 500 برابر بهتر از آلومینیوم عایق بندی کنند. پروفیل های حرارتی شکست مقدار Uf بسیار کمتری دارند و در نتیجه حرارت کمتری منتقل می شود.</p>
+        </div>
+          <div class="section-title" style="margin-top: 30px">
+          <h2>لزوم استفاده از ترمال بریک در پنجره آلومینیومی</h2>
+          <p style="font-size: 15px">
+پنجره دوجداره ترمال بریک
+پنجره دوجداره ترمال بریک
+صفحه اصلی » مقالات » کلینیک ساختمانی » پنجره دوجداره ترمال بریک
+با گسترش گرمایش جهانی و استفاده روز افزون از سوخت ها ، کره ی زمین روز به روز در حال آلوده تر شدن است . یکی از تهدید های اساسی سوزاندن سوخت های فسیلی است که برای گرمایش خانه ها به کار می رود . پنجره دوجداره ترمال بریک یک انتخاب بسیار مناسب برای بهینه‌سازی انرژی در تمام ساختمان های مسکونی و تجاری است. استفاده از پنجره های ترمال بریک علاوه بر کمک به حفظ طبیعت هزینه های ناشی از مصرف سوخت را نیز کاهش می دهد . همچنین خرید پنجره آلومینیومی ترمال بریک یک راه حل مناسب برای حفظ گرمایش تولید شده در خانه ها است .شما کافیست برای مشاوره ی رایگان با این شماره 02188068352 تماس بگیرید.متخصصین ما با بهترین مشاوره برای شما بهترین کیفیت با کمترین قیمت را تهیه میکنند.
+
+
+واژه Thermal break در واقع یک واژه انگلیسی به معنای شکست حرارتی می باشد . در واقع در پنجره های ترمال بریک برای جلوگیری از انتقال حرارت و هدر رفت انرژی از یک شکست حرارتی استفاده می شود. این شکست حرارتی چرخه انتقال حرارت را قطع می کند . ما در این مقاله می خواهیم در مورد پنجره دوجداره ترمال بریک صحبت کنیم . با ما همراه باشید .
+
+شما عزیزان می توانید بر روی این لینک کلیک کنید و در مورد درب آلومینیومی بیشتر بخوانید و نمونه های آن را در این صفحه مشاهده کنید
+ترمال بریک چیست
+
+ترمال بریک یا همان شکست حرارتی قطعه ای از مواد نارسانا با انتقال حرارتی کم است که بین دو قسمت داخلی و خارجی فریم آلومینیومی قرار می گیرد . این قطعه جریان انتقال انرژی حرارتی بین مواد رسانا را کاهش داده یا از آن جلوگیری می کند . پنجره های ترمال بریک اغلب در مقایسه با پنجره های بدون ترمال بریک دارای عملکرد بالاتری از لحاظ حرارتی و همچنین با فریم های باریک تر هستند.
+
+معمولا یک ماده با قابلیت رسانایی حرارتی کم ، مانند پلیمر به عنوان مانع بین دو ماده رسانا استفاده می شود. مواد پلیمری مقاومت بالایی در برابر انتقال حرارت دارند و می توانند تا 500 برابر بهتر از آلومینیوم عایق بندی کنند. پروفیل های حرارتی شکست مقدار Uf بسیار کمتری دارند و در نتیجه حرارت کمتری منتقل می شود.
+
+برای مشاهده انواع نمونه های پنجره دوجداره ساختمان به این صفحه مراجعه کنید
+لزوم استفاده از ترمال بریک در پنجره آلومینیومی
+
+آلومینیوم رسانای خوبی برای انتقال گرما و سرما می باشد . به همین دلیل پنجره هایی که با فریم آلومینیوم طراحی و تولید می شوند ، ممکن است انرژی زیادی را از طریق همرفت حرارتی در فریم ها ، هدر دهند . این هدر رفت انرژی به این صورت شکل می گیرد که دمای تولید شده در داخل خانه به بیرون از آن نفوذ کند . و یا دمای بیرون به داخل نفوذ کند . این مسئله هنگامی اهمیت پیدا می کند که ما در داخل فضا نیاز به حرارت و یا خنکی داریم ولی این حرارت و یا خنکی ایجاد شده به خارج از فضا نفوذ می کنند و جای خود را به هوای وارد شده می دهند . در این هنگام است که تمامی انرژی تولید شده توسط دستگاه های تبادل حرارت به هدر می رود .</p>
+              <br>
+          <p style="font-size: 15px">می توان گفت هدر رفت حرارتی تنها عیب پنجره های آلومینیومی است . اما اصلا جای نگرانی نیست چون به وسیله استفاده از ویژگی ترمال بریک می توان به نوعی عایق بندی دست پیدا کرد . که در پنجره های آلومینیومی استفاده می شود و از هدر رفتن انرژی جلوگیری می کند .</p>
+        </div><div class="section-title" style="margin-top: 30px">
+          <h2>نمای کرتین وال چیست؟</h2>
+
+          <p style="font-size: 15px">این نوع پنجره ها از جنس شیشه و پروفیل آلومینیوم ساخته می شوند و به صورت کلی در ساختمان های مرتفع کاربرد فراوان دارند، زیرا بسیار سبک بوده و زمان کمی برای ساخت آنها در مقایسه با سایر روش ها نیاز است. این پنجره ها به صورت های مختلفی ارائه می شوند که شامل: کاملا ثابت، عایق در برابر آب و قابلیت تحمل بار بالا شده و نکته مهم در اجرای این سازه ها در شرایط مختلف آب و هوایی، توجه به انبساط و انقباض آنها است که در پایداری و عمر آنها بسیار تاثیرگذار می باشد. سایر قسمت های این پنجره ها در کارخانه ساخته می شوند و در محل ساختمان به هم متصل می گردند که این امر سبب راحتی در اجرای آنها بوده و زمان مورد نیاز را بسیار کاهش می دهند.</p>
+        </div>
+          <div class="section-title">
+          <h2>ویژگی های پنجره آلومینیومی نرمال</h2>
+          <p style="font-size: 20px;font-weight: bold;text-align: right">مزایا: به صورت کلی می توان مزایای پنجره کرتین وال را به شرح زیر بیان کرد:</p>
+<br>
+            <p style="font-size: 20px;">
+
+            <ul style="user-select: auto;text-align: right">
+            <li style="user-select: auto;">سبک بودن و اجرای آسان این روش در مقایسه با سایر روش ها و امکان نصب لولا و باز شدن در حالت های مختلف</li>
+            <li style="user-select: auto;">مقاوم بودن این سازه ها در برابر نیرو های خارجی (نیروی باد و زلزله)</li>
+            <li style="user-select: auto;">قابلیت عایق بودن بالایی دارند و هدر رفتن انرژی را کاهش داده، به همین دلیل سبب کاهش هزینه ها می شوند.</li>
+            <li style="user-select: auto;">مقرون به صرفه بودن این روش در برابر سایر روش ها از جمله سنگ کاری</li>
+            <li style="user-select: auto;">انعطاف پذیر بودن این سازه ها از لحاظ ابعادی که می توان اندازه های کوچک تا بزرگ را ایجاد کرد.</li>
+            <li style="user-select: auto;">استفاده از شیشه چند جداره در این پنجره ها سبب عبور موثر و مناسب نور شده و بنابراین به لوازم روشنایی کمتری نیاز است و سبب ذخیره سازی انرژی می شوند.</li>
+            <li style="user-select: auto;">امکان استفاده از رنگ های مختلف در پروفیل آلومینیومی</li>
+        </ul>
+            </p>
+        </div>
+
+{#        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">#}
+{#          <div class="swiper-wrapper">#}
+{##}
+{#            <div class="swiper-slide">#}
+{#              <div class="testimonial-item">#}
+{#                <img src="{% static 'images/testimonials/testimonials-1.jpg'%}" class="testimonial-img" alt="">#}
+{#                <h3>Saul Goodman</h3>#}
+{#                <h4>Ceo &amp; Founder</h4>#}
+{#                <p>#}
+{#                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>#}
+{#                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.#}
+{#                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>#}
+{#                </p>#}
+{#              </div>#}
+{#            </div><!-- End testimonial item -->#}
+{##}
+{#            <div class="swiper-slide">#}
+{#              <div class="testimonial-item">#}
+{#                <img src="{% static 'images/testimonials/testimonials-2.jpg'%}" class="testimonial-img" alt="">#}
+{#                <h3>Sara Wilsson</h3>#}
+{#                <h4>Designer</h4>#}
+{#                <p>#}
+{#                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>#}
+{#                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.#}
+{#                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>#}
+{#                </p>#}
+{#              </div>#}
+{#            </div><!-- End testimonial item -->#}
+{##}
+{#            <div class="swiper-slide">#}
+{#              <div class="testimonial-item">#}
+{#                <img src="{% static 'images/testimonials/testimonials-3.jpg'%}" class="testimonial-img" alt="">#}
+{#                <h3>Jena Karlis</h3>#}
+{#                <h4>Store Owner</h4>#}
+{#                <p>#}
+{#                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>#}
+{#                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.#}
+{#                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>#}
+{#                </p>#}
+{#              </div>#}
+{#            </div><!-- End testimonial item -->#}
+{##}
+{#            <div class="swiper-slide">#}
+{#              <div class="testimonial-item">#}
+{#                <img src="{% static 'images/testimonials/testimonials-4.jpg'%}" class="testimonial-img" alt="">#}
+{#                <h3>Matt Brandon</h3>#}
+{#                <h4>Freelancer</h4>#}
+{#                <p>#}
+{#                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>#}
+{#                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.#}
+{#                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>#}
+{#                </p>#}
+{#              </div>#}
+{#            </div><!-- End testimonial item -->#}
+{##}
+{#            <div class="swiper-slide">#}
+{#              <div class="testimonial-item">#}
+{#                <img src="{% static 'images/testimonials/testimonials-5.jpg'%}" class="testimonial-img" alt="">#}
+{#                <h3>John Larson</h3>#}
+{#                <h4>Entrepreneur</h4>#}
+{#                <p>#}
+{#                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>#}
+{#                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.#}
+{#                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>#}
+{#                </p>#}
+{#              </div>#}
+{#            </div><!-- End testimonial item -->#}
+{##}
+{#          </div>#}
+{#          <div class="swiper-pagination"></div>#}
+{#        </div>#}
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+  </main>
+        {% endblock %}
+{% block footer_refrences %}
+      <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+{% endblock %}

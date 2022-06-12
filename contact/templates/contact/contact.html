@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    شرکت آلمینیوم | ارتباط با ما
+{% endblock %}
+
+{% block header_refrences %}
+    <!-- Favicons -->
+  <link href="{% static '/images/favicon.png' %}" rel="icon">
+  <link href="{% static '/images/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+
+  <link href="{% static  'vendor/aos/aos.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'style.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block header_nav_bar %}
+    <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <a href="{% url 'home' %}" class="logo"><img src="{% static 'images/logo-removebg-preview (1).png' %}" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="{% url 'home' %}">خانه</a></li>
+          <li><a href="{% url 'projects' %}">محصولات</a></li>
+          <li><a class="active" href="{% url 'contact' %}">ارتباط با ما</a></li>
+          <li><a href="{% url 'about' %}">درباره ما</a></li>
+          <!-- <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-telegram"></i></i></a>
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+{% endblock %}
+    {% block content %}
+        <main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>ارتباط با ما</h2>
+{#          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>#}
+        </div>
+
+        <div>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>آدرس:</h4>
+                <p>تهران , شهرک صنعتی شمس آباد , بلوار آژادی , خیابان نرگس 7 , پلاک 9</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>ایمیل:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>تماس:</h4>
+                <p>09121853913</p>
+                <p>09123116419</p>
+                <p>09124839762</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+              <!-- action="forms/contact.php"-->
+
+            <form action="{% url 'contact' %}" method="post" role="form" class="email-form">
+                {% csrf_token %}
+
+
+              <div class="row">
+                <div class="col-md-6 form-group {% if contact_form.full_name.errors %}text-danger{% endif %}">
+{#                  <input type="text" name="name" class="form-control" id="name" placeholder="نام" >#}
+                    {{ contact_form.full_name.label_tag }}
+                    {{ contact_form.full_name }}
+                    {{ contact_form.full_name.errors }}
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0 {% if contact_form.email.errors %}text-danger{% endif %}">
+{#                  <input type="email" class="form-control" name="email" id="email" placeholder="ایمیل" >#}
+                    {{ contact_form.mail.label_tag }}
+                    {{ contact_form.mail }}
+                    {{ contact_form.mail.errors }}
+                </div>
+              </div>
+              <div class="form-group mt-3 {% if contact_form.subject.errors %}text-danger{% endif %}">
+{#                <input type="text" class="form-control" name="subject" id="subject" placeholder="موضوع" >#}
+                  {{ contact_form.subject.label_tag }}
+                  {{ contact_form.subject }}
+                  {{ contact_form.subject.errors }}
+              </div>
+              <div class="form-group mt-3 {% if contact_form.text.errors %}text-danger{% endif %}">
+{#                <textarea class="form-control" name="message" rows="5" placeholder="پیام" ></textarea>#}
+                  {{ contact_form.message.label_tag }}
+                  {{ contact_form.message }}
+                  {{ contact_form.message.errors }}
+              </div>
+              <div class="my-3">
+                <div class="loading">درحال بارگزاری</div>
+                <div class="error-message"></div>
+                <div class="sent-message">پیام شما ارسال شد. ممنون!</div>
+              </div>
+
+
+
+
+              <div class="text-center"><button type="submit">ارسال پیام</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+        {% endblock %}
+{% block footer_refrences %}
+      <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+{% endblock %}
